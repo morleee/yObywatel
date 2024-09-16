@@ -1,6 +1,6 @@
 
 var time = document.querySelector(".time_text");
-var params = window.location.search.searchParams;
+var params = new URLSearchParams(window.location.search);
 
 var firstname = params.get("firstname");
 var surname = parseInt(params.get("surname"));
