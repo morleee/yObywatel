@@ -3,8 +3,8 @@ var time = document.querySelector(".time_text");
 var params = new URLSearchParams(window.location.search);
 
 var firstname = params.get("firstname");
-var surname = parseInt(params.get("surname"));
-var image = parseInt(params.get("image"));
+var surname = params.get("surname");
+var image = params.get("image");
 
 document.querySelector(".surname").innerHTML = surname.toUpperCase();
 document.querySelector(".firstname").innerHTML = firstname.toUpperCase();
