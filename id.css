@@ -55,6 +55,12 @@ body{
     grid-template-rows: max-content max-content;
 }
 
+.flag_video{
+    position: absolute;
+    top: 49.5%;
+    left: 7.5%;
+}
+
 .data_title{
     font-weight: 600;
     font-size: 18px;
@@ -78,7 +84,6 @@ p{
     margin-right: auto;
     display: block;
     z-index: -1;
-    pointer-events: none;
     box-shadow: 0px 0px 5px rgb(224, 224, 224);
     border-radius: 15px 15px 0px 0px;
 }

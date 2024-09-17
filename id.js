@@ -1,4 +1,5 @@
 
+
 var time = document.querySelector(".time_text");
 var params = new URLSearchParams(window.location.search);
 
