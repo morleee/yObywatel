@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    display: none;
+}
+
 /**styling**/
 body{
     background-color: #f5f6fb;
@@ -109,12 +121,39 @@ p{
     margin-bottom: 10px;
 }
 
+.bottom_element_image{
+    width: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.bottom_element_grid{
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 100%;
+    grid-template-rows: max-content max-content;
+    height: max-content;
+    width: 100%;
+    display: grid;
+}
+
+.bottom_element_text{
+    margin-top: 0;
+    font-size: 11px;
+    color: #57585d;
+    font-weight: 400;
+    text-align: center;
+}
+
 .bottom_text{
     font-size: 18px;
     font-weight: bold;
     margin-top: auto;
     margin-bottom: auto;
-    margin-left: 30px;
+    margin-left: 17px;
 }
 
 .bottom_grid{
@@ -129,13 +168,48 @@ p{
     margin-right: auto;
 }
 
+.bottom_bar_grid{
+    display: grid;
+    grid-template-columns: repeat(5, calc(100% / 5));
+    height: 100%;
+    width: 100%;
+}
+
 .bottom_image{
-    width: 40px;
+    width: 32px;
     margin-top: auto;
     margin-bottom: auto;
 }
 
+.bottom_bar{
+    position: fixed;
+    background-color: #f5f6fb;
+    border-top: 0.1px solid rgb(189, 189, 189);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 10000;
+}
+
+.inset{
+    box-shadow: inset 0px 0px 20px white;
+    background-color: transparent;
+    position: absolute;
+    top: 5%;
+    left: 7.5%;
+    width: 35%;
+    border-radius: 15px;
+    height: 42%;
+    z-index: 1000;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
 .id_own_image{
+    filter: grayscale(1);
+    box-shadow: 0px 0px 5px white;
     position: absolute;
     top: 5%;
     left: 7.5%;
