@@ -3,11 +3,11 @@
 /**styling**/
 body{
     background-color: #f5f6fb;
-    touch-action: none;
+    touch-action: pan-x, pan-y;
 }
 
 html{
-    touch-action: none;
+    touch-action: pan-x, pan-y;
 }
 
 .back_img{
