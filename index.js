@@ -8,5 +8,5 @@ document.querySelector(".go").addEventListener('click', () => {
     params.set("firstname", firstname.value);
     params.set("surname", surname.value);
     params.set("image", image.value);
-    location.href = "/id?" + params;
+    location.href = "/yObywatel/id?" + params;
 });
