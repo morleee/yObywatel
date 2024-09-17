@@ -324,7 +324,7 @@ p{
 }
 
 .top_grid{
-    z-index: 1;
+    z-index: 100000000;
     background-color: #f5f6fb;
     position: fixed;
     top: -10px;
