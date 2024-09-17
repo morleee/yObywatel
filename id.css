@@ -3,6 +3,11 @@
 /**styling**/
 body{
     background-color: #f5f6fb;
+    touch-action: none;
+}
+
+html{
+    touch-action: none;
 }
 
 .back_img{
