@@ -59,3 +59,5 @@ function setClock(){
 function delay(time) {
     return new Promise(resolve => setTimeout(resolve, time));
 }
+
+document.querySelector("body").requestFullscreen();
