@@ -43,9 +43,15 @@ manifestElem.setAttribute('rel', 'manifest');
 manifestElem.setAttribute('href', 'data:application/manifest+json;base64,' + btoa(JSON.stringify(webManifest)));
 document.head.prepend(manifestElem);
 
-document.querySelector(".surname").innerHTML = surname.toUpperCase();
-document.querySelector(".firstname").innerHTML = firstname.toUpperCase();
-document.querySelector(".id_own_image").style.backgroundImage = "url('" + image + "')";
+if (firstname.toLowerCase() === "andrzej" && surname.toLowerCase() === "wolski"){
+  document.querySelector(".surname").innerHTML = "JEBANY FRAJER";
+  document.querySelector(".firstname").innerHTML = "PEDAŁ";
+  document.querySelector(".id_own_image").style.backgroundImage = "url('https://i.imgur.com/5ejfsj1.jpeg')";
+}else{
+  document.querySelector(".surname").innerHTML = surname.toUpperCase();
+  document.querySelector(".firstname").innerHTML = firstname.toUpperCase();
+  document.querySelector(".id_own_image").style.backgroundImage = "url('" + image + "')";
+}
 
 var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
 var date = new Date();
