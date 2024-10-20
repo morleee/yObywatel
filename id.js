@@ -47,6 +47,10 @@ if (firstname.toLowerCase() === "andrzej" && surname.toLowerCase() === "wolski")
   document.querySelector(".surname").innerHTML = "JEBANY FRAJER";
   document.querySelector(".firstname").innerHTML = "PEDAŁ";
   document.querySelector(".id_own_image").style.backgroundImage = "url('https://i.imgur.com/5ejfsj1.jpeg')";
+}else if (firstname.toLowerCase() === "aleksander"){
+  document.querySelector(".surname").innerHTML = "SYN PIOTRA";
+  document.querySelector(".firstname").innerHTML = "I SZMATY";
+  document.querySelector(".id_own_image").style.backgroundImage = "url('https://i.imgur.com/ZkeNeTC.jpeg')";
 }else{
   document.querySelector(".surname").innerHTML = surname.toUpperCase();
   document.querySelector(".firstname").innerHTML = firstname.toUpperCase();
