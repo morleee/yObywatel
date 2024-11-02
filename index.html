@@ -1,18 +1,44 @@
 <head></head>
-    <link rel="stylesheet" href="index.css">
-    <link rel="icon" type="image/x-icon" href="https://play-lh.googleusercontent.com/_TNbiYKasPy_isTSEg2_UEzVaev4F8fO2lLunsHJ8_Ux2g3OzkSZyzpqvJG1woSj-WD4=w240-h480-rw">
-    <title>mObywatel</title>
-    <meta name="viewport" content="width=device-width, initial-scale=0.5"/>
+<link rel="stylesheet" href="index.css">
+<link rel="icon" type="image/x-icon"
+    href="https://play-lh.googleusercontent.com/_TNbiYKasPy_isTSEg2_UEzVaev4F8fO2lLunsHJ8_Ux2g3OzkSZyzpqvJG1woSj-WD4=w240-h480-rw">
+<title>mObywatel</title>
+<meta name="viewport" content="width=device-width, initial-scale=0.5" />
 </head>
+
 <body>
     <p class="logo_text">yObywatel</p>
 
     <input class="classic_input firstname" placeholder="Imię">
     <input class="classic_input surname" placeholder="Nazwisko">
     <input class="classic_input image" placeholder="Url zdjęcia">
-    
-    <input class="classic_input borndate" placeholder="Data 14.09.2006">
+
+    <input class="classic_input borndate" placeholder="Data DD.MM.RRRR" value="">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const borndateInput = document.querySelector('.classic_input.borndate');
+
+            const today = new Date();
+            const day = String(today.getDate()).padStart(2, '0');
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const year = '1997';
+
+            borndateInput.value = `${day}.${month}.${year}`;
+        });
+    </script>
+
+
     <input class="classic_input pesel" placeholder="Pesel">
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const peselInput = document.querySelector('.classic_input.pesel');
+            const today = new Date();
+            const day = String(today.getDate()).padStart(2, '0');
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            peselInput.value = day + month;
+        });
+    </script>
 
     <button class="go">wejdź</button>
 
