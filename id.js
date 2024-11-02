@@ -14,6 +14,9 @@ var image = params.get("image");
 var borndate = params.get("borndate");
 var pesel = params.get("pesel");
 
+
+
+
 function hideAddressBar(){
   if(document.documentElement.scrollHeight<window.outerHeight/window.devicePixelRatio)
     document.documentElement.style.height=(window.outerHeight/window.devicePixelRatio)+'px';
@@ -53,7 +56,13 @@ document.querySelector(".firstname").innerHTML = firstname.toUpperCase();
 document.querySelector(".pesel").innerHTML = pesel.toUpperCase();
 document.querySelector(".borndate").innerHTML = borndate.toUpperCase();
 
-document.querySelector(".id_own_image").style.backgroundImage = "url('" + image + "')";
+// document.querySelector(".id_own_image").style.backgroundImage = "url('" + image + "')";
+
+// Load saved image from localStorage (if any) and set it as the background
+const savedImage = localStorage.getItem('profileImage');
+if (savedImage) {
+    document.querySelector('.id_own_image').style.backgroundImage = `url('${savedImage}')`;
+}
 
 var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
 var date = new Date();
