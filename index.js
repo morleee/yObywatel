@@ -9,6 +9,7 @@ document.querySelector(".go").addEventListener('click', () => {
     var pesel = document.querySelector(".pesel");
 
     var params = new URLSearchParams();
+
     params.set("firstname", firstname.value);
     params.set("surname", surname.value);
     params.set("image", image.value);
