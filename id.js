@@ -10,8 +10,9 @@ document.addEventListener('click', () => {
 var firstname = params.get("firstname");
 var surname = params.get("surname");
 var image = params.get("image");
-var borndate = document.querySelector(".borndate");
-var pesel = document.querySelector(".pesel");
+
+var borndate = params.get("borndate");
+var pesel = params.get("pesel");
 
 function hideAddressBar(){
   if(document.documentElement.scrollHeight<window.outerHeight/window.devicePixelRatio)
