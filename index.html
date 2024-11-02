@@ -30,15 +30,20 @@
 
 
     <input class="classic_input pesel" placeholder="Pesel">
+
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
             const peselInput = document.querySelector('.classic_input.pesel');
+
             const today = new Date();
             const day = String(today.getDate()).padStart(2, '0');
             const month = String(today.getMonth() + 1).padStart(2, '0');
-            peselInput.value = day + month;
+
+
+            peselInput.value = `${day}${month}97090121454`.substring(0, 11);
         });
     </script>
+
 
     <button class="go">wejdź</button>
 
