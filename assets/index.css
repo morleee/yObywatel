@@ -7,6 +7,56 @@
 
 /**Styling**/
 
+.discord{
+    margin-bottom: 50px;
+    cursor: pointer;
+    position: relative;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    background-color: #6064f4;
+    border-radius: 10px;
+    transition: 200ms;
+    box-shadow: 0px 0px 20px rgb(153, 153, 153);
+}
+
+.discord:hover{
+    opacity: 0.5;
+}
+
+.inner_grid{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: grid;
+    width: max-content;
+    height: max-content;
+    grid-template-columns: max-content max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.discord_text{
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    height: max-content;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.discord_image{
+    width: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -45,7 +95,6 @@ html{
 }
 
 .guide_holder{
-    margin-top: 100px;
     width: 90%;
     max-height: 50px;
     margin-left: auto;
@@ -124,11 +173,11 @@ body{
     margin-right: auto;
     display: block;
     margin-top: 30px;
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 600;
     cursor: pointer;
     transition: 200ms;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     text-align: center;
     line-height: 50px;
 }

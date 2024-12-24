@@ -11,6 +11,28 @@ let webManifest = {
   "display": "standalone"
 };
 
+function getMobileOperatingSystem() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+  if (/windows phone/i.test(userAgent)) {
+      return 1;
+  }
+
+  if (/android/i.test(userAgent)) {
+      return 2;
+  }
+
+  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      return 3;
+  }
+
+  return 4;
+}
+
+if (getMobileOperatingSystem() == 2){
+    document.querySelector(".bottom_bar").style.height = "70px"
+}
+
 let manifestElem = document.createElement('link');
 manifestElem.setAttribute('rel', 'manifest');
 manifestElem.setAttribute('href', 'data:application/manifest+json;base64,' + btoa(JSON.stringify(webManifest)));
