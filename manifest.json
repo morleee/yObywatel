@@ -1,0 +1,7 @@
+{
+    "short_name": "mObywatel",
+    "name": "mObywatel",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "landscape"
+  }

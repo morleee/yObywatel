@@ -95,3 +95,14 @@ function forwardToId(params){
     location.href = "/yObywatel/id?" + params
 
 }
+
+var guide = document.querySelector(".guide_holder");
+guide.addEventListener('click', () => {
+
+    if (guide.classList.contains("unfolded")){
+        guide.classList.remove("unfolded");
+    }else{
+        guide.classList.add("unfolded");
+    }
+
+})
