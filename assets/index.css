@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --main-color: rgb(41, 41, 41);
+    --error-color: rgb(206, 29, 29);
+}
+
+/**Styling**/
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    background-color: rgb(82, 82, 82);
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+    width: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.logo{
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 80px;
+    border-radius: 10px;
+}
+
+.subtext{
+    color: var(--main-color);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 80px;
+}
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: white;
+}
+
+.go{
+    width: 90%;
+    border: 2px solid var(--main-color);
+    height: 40px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 100px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 500ms;
+    margin-bottom: 50px;
+}
+
+.go:hover{
+    opacity: 0.5;
+}
+
+.logo_text{
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-color);
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.classic_input{
+    color: white;
+    background-color: transparent;
+    font-family: "Poppins", sans-serif;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    border-bottom: 2px solid white;
+    margin-top: 30px;
+    display: block;
+}
+
+input:focus{
+    outline: none;
+}
+
+.input_holder{
+    height: max-content;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.placeholder{
+    color: var(--main-color);
+    opacity: 0.5;
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: max-content;
+    margin-top: auto;
+    margin-bottom: auto;
+    left: 2px;
+    transition: 200ms;
+    pointer-events: none;
+}
+
+.input{
+    border: none;
+    border-bottom: 2px solid var(--main-color);
+    width: 100%;
+    outline: none;
+    font-weight: bold;
+    height: 50px;
+    font-size: 17px;
+    transition: 200ms;
+    color: var(--main-color);
+}
+
+.input:focus ~ .placeholder{
+    bottom: 50px;
+    font-size: 14px;
+    transition: 200ms;
+}
+
+.input:not(:placeholder-shown) ~ .placeholder{
+    bottom: 50px;
+    font-size: 14px;
+    transition: 200ms;
+}
+
+.error{
+    color: var(--error-color);
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    top: 40px;
+    opacity: 0;
+    transition: 200ms;
+}
+
+.error_shown .error{
+    opacity: 1;
+}
+
+.error_shown .input{
+    border-bottom: 2px solid var(--error-color);
+}
+
+.error_shown .placeholder{
+    color: var(--error-color);
+}
+
+.upload_grid{
+    height: max-content;
+    grid-template-columns: 100%;
+    grid-template-rows: max-content max-content;
+    width: max-content;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.upload{
+    height: 200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px dotted var(--main-color);
+    border-radius: 25px;
+    margin-bottom: 50px;
+    margin-top: 60px;
+    position: relative;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.upload_uploading{
+    display: none;
+}
+
+.upload_uploaded{
+    display: none;
+}
+
+.upload:hover{
+    opacity: 0.5;
+}
+
+.upload_text{
+    font-size: 20px;
+    font-weight: bold;
+    height: max-content;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--main-color);
+}
+
+.upload_image{
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 10px;
+    transform: translateY(-1000px);
+    filter: drop-shadow(0px 1000px var(--main-color));
+}
+
+.upload .error{
+    top: -50px;
+}
+
+.upload_loading .upload_grid{
+    display: none;
+}
+
+.upload_loading .upload_uploading{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid;
+    border-color: transparent var(--main-color) transparent var(--main-color);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: loading;
+    animation-iteration-count: infinite;
+    animation-duration: 900ms;
+}
+
+.upload_uploaded{
+    width: auto;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+.upload_loaded {
+    background-color: black;
+    border: none;
+}
+
+.upload_loaded .upload_image{
+    display: none;
+}
+
+.upload_loaded .upload_text{
+    display: none;
+}
+
+.upload_loaded .upload_uploaded{
+    display: block;
+}
+
+@keyframes loading {
+    
+    0%{
+        rotate: 0deg;
+    }
+
+    100%{
+        rotate: 360deg;
+    }
+
+}
