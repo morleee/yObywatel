@@ -1,7 +1,7 @@
 {
-    "short_name": "mObywatel",
-    "name": "mObywatel",
-    "start_url": "/",
-    "display": "standalone",
-    "orientation": "landscape"
-  }
+  "short_name": "mObywatel",
+  "name": "mObywatel",
+  "display": "standalone",
+  "theme_color": "#f5f6fb",
+  "background_color": "#f5f6fb"
+}
