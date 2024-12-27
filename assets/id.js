@@ -1,7 +1,23 @@
 
 
-var time = document.querySelector(".time_text");
+var time = document.getElementById("time");
 var params = new URLSearchParams(window.location.search);
+
+var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+
+function delay(time) {
+    return new Promise(resolve => setTimeout(resolve, time));
+}
+
+var date = new Date();
+setClock();
+function setClock(){
+    date = new Date()
+    time.innerHTML = "Czas: " + date.toTimeString().split(" ")[0] + " " + date.toLocaleDateString("pl-PL", options);    
+    delay(1000).then(() => {
+        setClock();
+    })
+}
 
 let webManifest = {
   "name": "",
@@ -37,22 +53,6 @@ let manifestElem = document.createElement('link');
 manifestElem.setAttribute('rel', 'manifest');
 manifestElem.setAttribute('href', 'data:application/manifest+json;base64,' + btoa(JSON.stringify(webManifest)));
 document.head.prepend(manifestElem);
-
-var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
-var date = new Date();
-
-setClock();
-function setClock(){
-    date = new Date().
-    time.innerHTML = "Czas: " + date.toTimeString().split(" ")[0] + " " + date.toLocaleDateString("pl-PL", options);    
-    delay(1000).then(() => {
-        setClock();
-    })
-}
-
-function delay(time) {
-    return new Promise(resolve => setTimeout(resolve, time));
-}
 
 var unfold = document.querySelector(".info_holder");
 unfold.addEventListener('click', () => {
