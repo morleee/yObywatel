@@ -68,8 +68,23 @@ body{
 
 .flag_video{
     position: absolute;
-    top: 49.45%;
+    top: 50.5%;
     left: 7.5%;
+    width: 18.9%;
+}
+
+.eagle_text{
+    position: absolute;
+    top: 68.1%;
+    left: 18%;
+    width: 20%;
+}
+
+.eagle_video{
+    position: absolute;
+    top: 66.1%;
+    left: 7.7%;
+    width: 8.8%;
 }
 
 .data_title{
