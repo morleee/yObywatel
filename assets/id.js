@@ -44,7 +44,7 @@ var date = new Date();
 setClock();
 function setClock(){
     date = new Date();
-    time.innerHTML = "Czas: " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + " " + date.toLocaleDateString("pl-PL", options);    
+    time.innerHTML = "Czas: " + date.toTimeString().split(" ")[0] + " " + date.toLocaleDateString("pl-PL", options);    
     delay(1000).then(() => {
         setClock();
     })
